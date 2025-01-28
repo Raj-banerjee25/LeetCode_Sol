@@ -1,0 +1,10 @@
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+    // in-place reverse of string
+        int st=0, e=s.size()-1;
+       while(st<e){
+        swap(s[st++],s[e--]);
+       } 
+    }
+};
