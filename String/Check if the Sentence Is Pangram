@@ -1,0 +1,19 @@
+class Solution {
+public:
+    bool checkIfPangram(string sentence) {
+        int n = sentence.size();
+        // if string size is less than 26 then return
+        if(n<25) return false;
+        // freq arr to store count of all character.
+        int freq[26]={0};
+        for(int i=0; i<n; i++){
+             freq[sentence[i]-'a']=true;
+            
+        }
+        // compare whether all 26 alphabet are present or not
+        for(int i=0;i<26; i++){
+            if(freq[i]!= true) return false;
+        }
+        return true;
+    }
+};
